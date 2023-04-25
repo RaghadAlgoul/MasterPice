@@ -1,0 +1,205 @@
+﻿@model List<MP_TS_SHOP_.Models.User>
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+
+    <section class="user-profile section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-lg-4 offset-lg-0">
+                    <div class="sidebar">
+                        <!-- User Widget -->
+                        <div class="widget user-dashboard-profile">
+                            <!-- User Image -->
+                            <div class="profile-thumb">
+                                @if (item.UserImage != null)
+                                {
+                                    <img src="~/Image/@item.UserImage" alt="" class="rounded-circle">
+                                }
+                                else
+                                {
+                                    {<img src="~/Image/userProfile.png" alt="" class="rounded-circle">}
+                                }
+
+                            </div>
+                            <!-- User Name -->
+                            <h5 class="text-center">@item.Name</h5>
+                            @{
+                                string date = item.JoinedDate.ToString();
+                                date = date.Substring(0, 9);
+                                <li class="list-inline-item">
+                                    <p>Joined on @date</p>
+                                </li>
+                            }
+
+
+
+                        </div>
+                        <!-- Dashboard Links -->
+                        <div class="widget user-dashboard-menu">
+                            <ul>
+                                <li>
+                                    <a href="/ProductsProvider/Index"><i class="fa fa-user"></i> My Product</a>
+                                </li>
+                                <li>
+                                    <a href="/ProductsProvider/Create"><i class="fa fa-user"></i> Add New Product</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard-archived-ads.html"><i class="fa fa-file-archive-o"></i>Archeved Ads <span>12</span></a>
+                                </li>
+                                <li>
+                                    <a href="dashboard-pending-ads.html"><i class="fa fa-bolt"></i> Pending Approval<span>23</span></a>
+                                </li>
+                                <li>
+                                    <a href="logout.html"><i class="fa fa-cog"></i> Logout</a>
+                                </li>
+                                <li>
+                                    <a href="delete-account.html"><i class="fa fa-power-off"></i>Delete Account</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0" id="profile">
+                    <!-- Edit Personal Info -->
+                    <div class="widget personal-info">
+                        <h3 class="widget-header user">Edit Personal Information</h3>
+                        <form action="#">
+                            <!-- First Name -->
+                            <div class="form-group">
+                                <label for="first-name"> Name</label>
+                                <input type="text" class="form-control" value="@item.Name" id="first-name">
+                            </div>
+                            <!-- Last Name -->
+                            <div class="form-group">
+                                <label for="last-name">Phone Number</label>
+                                <input type="text" class="form-control" value="@item.PhoneNumber" id="last-name">
+                            </div>
+
+                            <!-- Comunity Name -->
+                            <div class="form-group">
+                                <label for="comunity-name">Location</label>
+                                <input type="text" class="form-control" value="@item.UserLocation" id="comunity-name">
+                            </div>
+                            <div class="row form-group">
+                                <div class="col form-group">
+                                    <label for="comunity-name">Facebook Link</label>
+                                    <input type="text" class="form-control" value="@item.UserLocation" id="comunity-name">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="comunity-name">Instagram Link</label>
+                                    <input type="text" class="form-control" value="@item.UserInstagram" id="comunity-name">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="comunity-name">Tweeter Link</label>
+                                    <input type="text" class="form-control" value="@item.UserTweeter" id="comunity-name">
+                                </div>
+
+                            </div>
+
+                            <!-- File chooser -->
+                            <div class="form-group choose-file">
+                                <i class="fa fa-user text-center"></i>
+                                <input type="file" class="form-control-file d-inline" id="input-file">
+                            </div>
+
+                            <!-- Submit button -->
+                            <button class="btn btn-main-sm" onclick="ToEdit()" style="float:right">Edit Profile</button>
+                            <br /><br />
+                        </form>
+                    </div>
+
+                </div>
+           
+
+
+
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-0" id="editprofile" @*style="display:none"*@>
+                <!-- Edit Personal Info -->
+                <div class="widget personal-info">
+                    <h3 class="widget-header user">Edit Personal Information</h3>
+                    @using (Html.BeginForm("EditProfileAction", "ProductsProvider", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="first-name"> Name</label>
+                        <input type="text" class="form-control" value="@item.Name" id="Name" name="Name">
+                    </div>
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <label for="last-name">Phone Number</label>
+                        <input type="text" class="form-control" value="@item.PhoneNumber" id="phone">
+                    </div>
+
+                    <!-- Comunity Name -->
+                    <div class="form-group">
+                        <label for="comunity-name">Location</label>
+                        <input type="text" class="form-control" value="@item.UserLocation" id="location">
+                    </div>
+                    <div class="row form-group">
+                        <div class="col form-group">
+                            <label for="comunity-name">Facebook Link</label>
+                            <input type="text" class="form-control" value="@item.UserFaceBook" id="faceBook" name="faceBook">
+                        </div>
+                        <div class="col form-group">
+                            <label for="comunity-name">Instagram Link</label>
+                            <input type="text" class="form-control" value="@item.UserInstagram" id="UserInstagram" name="UserInstagram">
+                        </div>
+                        <div class="col form-group">
+                            <label for="comunity-name">Tweeter Link</label>
+                            <input type="text" class="form-control" value="@item.UserTweeter" id="tweeter">
+                        </div>
+
+                    </div>
+
+                    <!-- File chooser -->
+                    <div class="form-group choose-file">
+                        <i class="fa fa-user text-center"></i>
+                        <input type="file" class="form-control-file d-inline" id="pic">
+                    </div>
+
+                    <!-- Submit button -->
+                    <a href="/ProductsProvider/EditProfileAction" class="btn btn-main-sm" style="float:right" onclick="ToProfile()">Save My Changes</a>
+                    <br /><br />
+                    }
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        
+
+       
+    </section>
+
+    <script>
+        function ToEdit() {
+            const element = document.getElementById("profile")
+            element.classList.add("profile")
+        element.style.display = "none"
+
+            const element2 = document.getElementById("editprofile")
+            element2.classList.add("editprofile")
+        element2.style.display = "block"
+    }
+
+        function ToProfile() {
+            const element = document.getElementById("profile")
+            element.classList.add("profile")
+            element.style.display = "block"
+
+            const element2 = document.getElementById("editprofile")
+            element2.classList.add("editprofile")
+            element2.style.display = "none"
+    }
+
+    </script>
+
+}

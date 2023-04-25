@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7087c7c404484c0ca17ec5f0e3cb2a3d" Name="Diagram1">
+        <EntityTypeShape EntityType="TS_SHOPModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.AspNetRole" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.AspNetUserRole" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.AspNetUser" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Category" Width="1.5" PointX="6" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Comment" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Like" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Order" Width="1.5" PointX="10.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Product" Width="1.5" PointX="8.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Subscription" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.sysdiagram" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TS_SHOPModel.User" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="TS_SHOPModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Users_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Comments_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Likes_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Orders_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Products_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Subscriptions_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TS_SHOPModel.Location" Width="1.5" PointX="5.375" PointY="3.875" />
+        <AssociationConnector Association="TS_SHOPModel.FK_Users_Location" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

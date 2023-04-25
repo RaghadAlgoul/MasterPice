@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Subscriptions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--<h2>Subscriptions</h2>-->
+@*<a href="/Home/test/1"><div style="height:250px;width:150px;background-color:red">Ofeer1</div></a>
+    <a href="/Home/test/2"><div style="height:250px;width:150px;background-color:red">Ofeer2</div></a>
+    <a href="/Home/test/3"><div style="height:250px;width:150px;background-color:red">Ofeer3</div></a>*@
+<!--<div id="div1" style="height:250px;width:150px;background-color:red;cursor:pointer" onclick="showAlert(1)">
+   kkk
+</div>
+<br />
+<div id="div2" style="height: 250px; width: 150px; background-color: red; cursor: pointer" onclick="showAlert(2)">t2</div>
+<br />-->
+
+<section class="section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="heading text-center pb-5">
+                    <h2 class="font-weight-bold">Best Price Guaranteed</h2>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" onclick="showAlert(1)">
+                <div class="package-content bg-light border text-center p-5 my-2 my-lg-0">
+                    <div class="package-content-heading border-bottom">
+                        <i class="fa fa-paper-plane"></i>
+                        <h2>Basic Package</h2>
+                        <h4 class="py-3"> <span>$10.00</span> Per Month</h4>
+                    </div>
+                    <ul>
+                        <li class="my-4"> <i class="fa fa-check"></i> Free Ad Posting</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>15 Features Ad Availability</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>For 15 Days</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>100% Secure</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" onclick="showAlert(2)">
+                <div class="package-content bg-light border text-center my-2 my-lg-0 p-5">
+                    <div class="package-content-heading border-bottom">
+                        <i class="fa fa-plane"></i>
+                        <h2>Standard Package</h2>
+                        <h4 class="py-3"> <span>$30.00</span> Per Month</h4>
+                    </div>
+                    <ul>
+                        <li class="my-4"> <i class="fa fa-check"></i> Free Ad Posting</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>15 Features Ad Availability</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>For 15 Days</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>100% Secure</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mx-sm-auto">
+                <div class="package-content bg-light border text-center p-5 my-2 my-lg-0">
+                    <div class="package-content-heading border-bottom">
+                        <i class="fa fa-rocket"></i>
+                        <h2>Premium Package</h2>
+                        <h4 class="py-3"> <span>$50.00</span> Per Month</h4>
+                    </div>
+                    <ul>
+                        <li class="my-4"> <i class="fa fa-check"></i> Free Ad Posting</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>15 Features Ad Availability</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>For 15 Days</li>
+                        <li class="my-4"> <i class="fa fa-check"></i>100% Secure</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="~/vcard-personal-portfolio-master/assets/js/script.js"></script>
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+
+function showAlert(id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            );
+            // Perform the action here
+            window.location.href = '/Home/test/' + id;
+        }
+    });
+}
+</script>

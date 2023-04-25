@@ -1,0 +1,563 @@
+﻿@model List<MP_TS_SHOP_.Models.Product>
+
+@{
+    ViewBag.Title = "Single";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel='stylesheet' href='https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css'>
+
+<!--foreach (var item in Model)
+{-->
+<!-- Open Content -->
+<!--<section>
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-lg-5 mt-5">
+                <div class="card mb-3">
+                    <img class="card-img img-fluid" alt="Card image cap" id="product-detail" src="~/Image/item.Image1" style="width: 100%; height: 440px; padding: 10px; border: solid 2px #497174" />
+                </div>
+                <div class="row">-->
+<!--Start Controls-->
+<!--<div class="col-1 align-self-center">
+    <a href="#multi-item-example" role="button" data-bs-slide="prev">
+        <i class="text-dark fas fa-chevron-left"></i>
+        <span class="sr-only">Previous</span>
+    </a>
+</div>-->
+<!--End Controls-->
+<!--Start Carousel Wrapper-->
+<!--<div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">-->
+<!--Start Slides-->
+<!--<div class="carousel-inner product-links-wap" role="listbox">-->
+<!--First slide-->
+<!--<div class="carousel-item active">
+    <div class="row">
+        <div class="col-4">
+            <a href="#">
+                if (item.Image2 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image2" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#">
+                if (item.Image3 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image3" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#">
+               if (item.Image4 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image4" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+    </div>
+</div>-->
+<!--/.First slide-->
+<!--Second slide-->
+<!--<div class="carousel-item">
+    <div class="row">
+        <div class="col-4">
+            <a href="#">
+                if (item.Image5 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image5" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#">
+                if (item.Image5 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image5" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#">
+                if (item.Image5 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image5" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+    </div>
+</div>-->
+<!--/.Second slide-->
+<!--Third slide-->
+<!--<div class="carousel-item">
+    <div class="row">
+        <div class="col-4">
+            <a href="#">
+                if (item.Image5 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image5" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#">
+                if (item.Image5 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image5" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="#">
+                if (item.Image5 != null)
+                {
+                    <img class="card-img img-fluid" src="~/Image/item.Image5" alt="Product Image 1" style="width: 100%; padding: 10px; border: solid 2px #497174; background-color: white">
+
+                }
+            </a>
+        </div>
+    </div>
+</div>-->
+<!--/.Third slide-->
+<!--</div>-->
+<!--End Slides-->
+<!--</div>-->
+<!--End Carousel Wrapper-->
+<!--Start Controls-->
+<!--<div class="col-1 align-self-center">
+    <a href="#multi-item-example" role="button" data-bs-slide="next">
+        <i class="text-dark fas fa-chevron-right"></i>
+        <span class="sr-only">Next</span>
+    </a>
+</div>-->
+<!--End Controls-->
+<!--</div>
+</div>-->
+<!-- col end -->
+<!--<div class="col-lg-7 mt-5">
+                    <div class="card" style="border: solid 2px #497174">
+                        <div class="card-body">
+                            <h1 class="h2" style="font-weight: bold">item.Name</h1>
+                            <br />
+
+
+
+                            <div style="height: 228px">
+                                <p>item.Description</p>
+                            </div>
+
+                            <b style="font-weight: bold; padding: 5px 0px">Specification:</b>
+                            <br />
+                            <ul class="list-unstyled pb-3">
+                                if (item.State == true)
+                                {
+                                    <li style="color: black; background-color: #497174; padding: 5px 10px; border-radius: 12px; color: #F3F5F9; width: max-content; margin-top: 8px; width: 180px; font-family: Arial">State : New </li>
+
+                                }
+                                else
+                                {
+                                    <li style="color: black; background-color: #497174; padding: 5px 10px; border-radius: 12px; color: #F3F5F9; width: max-content; margin-top: 8px; width: 180px; font-family: Arial">State : Used </li>
+
+                                }
+                                <li style="color: black; background-color: #497174; padding: 5px 10px; border-radius: 12px; color: #F3F5F9; width: max-content; margin-top: 8px; width: 180px; font-family: Arial">Category : item.Category.CategoryName</li>
+                                <li style="color: black; background-color: #497174; padding: 5px 10px; border-radius: 12px; color: #F3F5F9; width: max-content; margin-top: 8px; width: 180px; font-family: Arial">Price : item.Price JOD</li>
+                                <li style="color: black; background-color: #497174; padding: 5px 10px; border-radius: 12px; color: #F3F5F9; width: max-content; margin-top: 8px; width: 180px; font-family: Arial">Size : item.Size EU</li>
+                                <li style="color: black; background-color: #497174; padding: 5px 10px; border-radius: 12px; color: #F3F5F9; width: max-content; margin-top: 8px; width: 180px; font-family: Arial">Color  : tem.Color</li>
+
+                            </ul>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}-->
+<!-- Close Content -->
+<!--<br />
+<div class="container" style="border: solid 2px #497174; background-color: white">
+    <h3 style="margin: 5px">Prpduct Owner</h3>
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between ">-->
+@*<div>
+        <a href="UserProfile.aspx"><img src="~/Image/@ViewBag.ProductOwnerImage" style="width: 80px; height: 80px; margin-top: 17px; border-radius: 50%; border: solid 2px #497174; margin-left: 10px; float: left" /></a>
+        <div style="margin-left: 20px; float: right">
+            <br />
+            <h4 style="color: black; font-family: Arial">@ViewBag.ProductOwnerName</h4>
+
+            <p class="py-2">
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-warning"></i>
+                <i class="fa fa-star text-secondary"></i>
+            </p>
+        </div>
+    </div>*@
+
+@*<div>
+        <h4 style="color: black; font-family: Arial;margin-top:20px">Location : </h4><br />
+        <h5> @ViewBag.ProductOwnerLocation </h5>
+    </div>*@
+@*<div>
+        <a href="/Home/ProductOwnerProfile/@ViewBag.ProductOwnerId" class="btn  btn-lg" style="background-color: #E26F66; color: #F3F5F9; font-weight: bold; margin-top: 20px" name="submit" value="addtocard"><i style="color: #F3F5F9" class="fa-solid fa-phone"></i> Contact with @ViewBag.ProductOwnerName</a>
+
+    </div>*@
+
+@*</div>
+        <br />
+    </div>*@
+
+
+
+
+
+
+<section class="section bg-gray">
+    <!-- Container Start -->
+    <div class="container">
+        <div class="row">
+            <!-- Left sidebar -->
+            <div class="col-md-8">
+                <div class="product-details">
+                    <h1 class="product-title">Hp Dual Core 2gb Ram-Slim Laptop Available In Very Low Price</h1>
+                    <div class="product-meta">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-user-o"></i> By <a href="">Andrew</a></li>
+                            <li class="list-inline-item"><i class="fa fa-folder-open-o"></i> Category<a href="">Electronics</a></li>
+                            <li class="list-inline-item"><i class="fa fa-location-arrow"></i> Location<a href="">Dhaka Bangladesh</a></li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid mt-2 mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-5 pr-2">
+                                <div class="card">
+                                    <div class="demo">
+                                        <ul id="lightSlider">
+                                            <li data-thumb="https://i.imgur.com/KZpuufK.jpg">
+                                                <img src="https://i.imgur.com/KZpuufK.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/GwiUmQA.jpg">
+                                                <img src="https://i.imgur.com/GwiUmQA.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/DhKkTrG.jpg">
+                                                <img src="https://i.imgur.com/DhKkTrG.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/kYWqL7k.jpg">
+                                                <img src="https://i.imgur.com/kYWqL7k.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/c9uUysL.jpg">
+                                                <img src="https://i.imgur.com/c9uUysL.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/KZpuufK.jpg">
+                                                <img src="https://i.imgur.com/KZpuufK.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/GwiUmQA.jpg">
+                                                <img src="https://i.imgur.com/GwiUmQA.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/DhKkTrG.jpg">
+                                                <img src="https://i.imgur.com/DhKkTrG.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/kYWqL7k.jpg">
+                                                <img src="https://i.imgur.com/kYWqL7k.jpg" />
+                                            </li>
+                                            <li data-thumb="https://i.imgur.com/c9uUysL.jpg">
+                                                <img src="https://i.imgur.com/c9uUysL.jpg" />
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content">
+                                <ul class="nav nav-pills  justify-content-center" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Product Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Specifications</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Reviews</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                        <h3 class="tab-title">Product Description</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia laudantium beatae quod perspiciatis, neque dolores eos rerum, ipsa iste cum culpa numquam amet provident eveniet pariatur, sunt repellendus quas voluptate dolor cumque autem molestias. Ab quod quaerat molestias culpa eius, perferendis facere vitae commodi maxime qui numquam ex voluptatem voluptate, fuga sequi, quasi! Accusantium eligendi vitae unde iure officia amet molestiae velit assumenda, quidem beatae explicabo dolore laboriosam mollitia quod eos, eaque voluptas enim fuga laborum, error provident labore nesciunt ad. Libero reiciendis necessitatibus voluptates ab excepturi rem non, nostrum aut aperiam? Itaque, aut. Quas nulla perferendis neque eveniet ullam?</p>
+
+                                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/LUH7njvhydE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                        <p></p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sed, officia reiciendis necessitatibus obcaecati eum, quaerat unde illo suscipit placeat nihil voluptatibus ipsa omnis repudiandae, excepturi! Id aperiam eius perferendis cupiditate exercitationem, mollitia numquam fuga, inventore quam eaque cumque fugiat, neque repudiandae dolore qui itaque iste asperiores ullam ut eum illum aliquam dignissimos similique! Aperiam aut temporibus optio nulla numquam molestias eum officia maiores aliquid laborum et officiis pariatur, delectus sapiente molestiae sit accusantium a libero, eligendi vero eius laboriosam minus. Nemo quibusdam nesciunt doloribus repellendus expedita necessitatibus velit vero?</p>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <h3 class="tab-title">Product Specifications</h3>
+                                        <table class="table table-bordered product-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Seller Price</td>
+                                                    <td>$450</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Added</td>
+                                                    <td>26th December</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>State</td>
+                                                    <td>Dhaka</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brand</td>
+                                                    <td>Apple</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Condition</td>
+                                                    <td>Used</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Model</td>
+                                                    <td>2017</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>State</td>
+                                                    <td>Dhaka</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Battery Life</td>
+                                                    <td>23</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <h3 class="tab-title">Product Review</h3>
+                                        <div class="product-review">
+                                            <div class="media">
+                                                <!-- Avater -->
+                                                <img src="images/user/user-thumb.jpg" alt="avater">
+                                                <div class="media-body">
+                                                    <!-- Ratings -->
+                                                    <div class="ratings">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <i class="fa fa-star"></i>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <i class="fa fa-star"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="name">
+                                                        <h5>Jessica Brown</h5>
+                                                    </div>
+                                                    <div class="date">
+                                                        <p>Mar 20, 2018</p>
+                                                    </div>
+                                                    <div class="review-comment">
+                                                        <p>
+                                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqe laudant tota rem ape riamipsa eaque.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-submission">
+                                                <h3 class="tab-title">Submit your review</h3>
+                                                <!-- Rate -->
+                                                <div class="rate">
+                                                    <div class="starrr"></div>
+                                                </div>
+                                                <div class="review-submit">
+                                                    <form action="#" class="row">
+                                                        <div class="col-lg-6">
+                                                            <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <textarea name="review" id="review" rows="10" class="form-control" placeholder="Message"></textarea>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button type="submit" class="btn btn-main">Sumbit</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="sidebar">
+                            <div class="widget price text-center">
+                                <h4>Price</h4>
+                                <p>$230</p>
+                            </div>
+                            <!-- User Profile widget -->
+                            <div class="widget user">
+                                <img class="rounded-circle" src="images/user/user-thumb.jpg" alt="">
+                                <h4><a href="">Jonathon Andrew</a></h4>
+                                <p class="member-time">Member Since Jun 27, 2017</p>
+                                <a href="">See all ads</a>
+                                <ul class="list-inline mt-20">
+                                    <li class="list-inline-item"><a href="" class="btn btn-contact">Contact</a></li>
+                                    <li class="list-inline-item"><a href="" class="btn btn-offer">Make an offer</a></li>
+                                </ul>
+                            </div>
+                            <!-- Map Widget -->
+                            <div class="widget map">
+                                <div class="map">
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                            <!-- Rate Widget -->
+                            <div class="widget rate">
+                                <!-- Heading -->
+                                <h5 class="widget-header text-center">
+                                    What would you rate
+                                    <br>
+                                    this product
+                                </h5>
+                                <!-- Rate -->
+                                <div class="starrr"></div>
+                            </div>
+                            <!-- Safety tips widget -->
+                            <div class="widget disclaimer">
+                                <h5 class="widget-header">Safety Tips</h5>
+                                <ul>
+                                    <li>Meet seller at a public place</li>
+                                    <li>Check the item before you buy</li>
+                                    <li>Pay only after collecting the item</li>
+                                    <li>Pay only after collecting the item</li>
+                                </ul>
+                            </div>
+                            <!-- Coupon Widget -->
+                            <div class="widget coupon text-center">
+                                <!-- Coupon description -->
+                                <p>
+                                    Have a great product to post ? Share it with
+                                    your fellow users.
+                                </p>
+                                <!-- Submii button -->
+                                <a href="" class="btn btn-transparent-white">Submit Listing</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Container End -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://sachinchoolur.github.io/lightslider/dist/js/lightslider.js'></script>
+<script>
+    $('#lightSlider').lightSlider({ gallery: true, item: 1, loop: true, slideMargin: 0, thumbItem: 9 });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $('#carousel-related-product').slick({
+        infinite: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        dots: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3
+            }
+        }
+        ]
+    });
+</script>
+<!-- End Slider Script -->
+<br />
